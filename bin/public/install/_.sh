@@ -30,13 +30,13 @@ install () {
         liberation-fonts-ttf
 
       echo "=== Installing powerline:"
-      font_setup install powerline
+      my_fonts install powerline
 
       echo "=== Installing nerd-fonts:"
-      font_setup install nerd-fonts
+      my_fonts install nerd-fonts
 
       echo "=== Installing fontsquirrel fonts:"
-      font_setup install fontsquirrel \
+      my_fonts install fontsquirrel \
         heuristica \
         oswald     \
         signika    \
@@ -47,14 +47,14 @@ install () {
         courier-prime
 
       echo "=== Installing fonts from github:"
-      font_setup install gelasio
-      font_setup install helveticaneue
-      font_setup install weblysleek
-      font_setup install raleway
-      font_setup install SanFrancisco
+      my_fonts install gelasio
+      my_fonts install helveticaneue
+      my_fonts install weblysleek
+      my_fonts install raleway
+      my_fonts install SanFrancisco
 
       echo "=== Installing tecate bitmap fonts:"
-      font_setup install tecate
+      my_fonts install tecate
 
       case "$(my_os name)" in
         "rolling_void")
@@ -73,23 +73,23 @@ install () {
       ;;
 
     gelasio)
-      font_setup install https://github.com/axilleas/googlefonts gelasio
+      my_fonts install https://github.com/axilleas/googlefonts gelasio
       ;;
 
     helveticaneue)
-      font_setup install https://github.com/nellielemonier/Helvetica-Neue helveticaneue
+      my_fonts install https://github.com/nellielemonier/Helvetica-Neue helveticaneue
       ;;
 
     weblysleek)
-      font_setup install https://github.com/nathanboktae/oauthdevconsole/tree/master/app/fonts weblysleek
+      my_fonts install https://github.com/nathanboktae/oauthdevconsole/tree/master/app/fonts weblysleek
       ;;
 
     raleway)
-      font_setup install https://github.com/google/fonts/tree/master/ofl/raleway  raleway
+      my_fonts install https://github.com/google/fonts/tree/master/ofl/raleway  raleway
       ;;
 
     SanFrancisco)
-      font_setup install https://github.com/AppleDesignResources/SanFranciscoFont SanFrancisco
+      my_fonts install https://github.com/AppleDesignResources/SanFranciscoFont SanFrancisco
       ;;
 
     powerline)
@@ -114,10 +114,10 @@ install () {
       ;;
 
     tecate) # bitmap fonts
-      font_setup install https://github.com/Tecate/bitmap-fonts/tree/master/bitmap/boxxy      boxxy
-      font_setup install https://github.com/Tecate/bitmap-fonts/tree/master/bitmap/zevv-peep  zevv-peep
-      font_setup install https://github.com/Tecate/bitmap-fonts/tree/master/bitmap/ctrld-font ctrld
-      font_setup install https://github.com/Tecate/bitmap-fonts/tree/master/bitmap/knxt       knxt
+      my_fonts install https://github.com/Tecate/bitmap-fonts/tree/master/bitmap/boxxy      boxxy
+      my_fonts install https://github.com/Tecate/bitmap-fonts/tree/master/bitmap/zevv-peep  zevv-peep
+      my_fonts install https://github.com/Tecate/bitmap-fonts/tree/master/bitmap/ctrld-font ctrld
+      my_fonts install https://github.com/Tecate/bitmap-fonts/tree/master/bitmap/knxt       knxt
       ;;
 
 
@@ -134,7 +134,7 @@ install () {
         cd "$TMP"
         local +x URL="${LINE#*.* }"
         local +x NAME="$(basename "$URL" .zip)"
-        if font_setup search "$NAME" ; then
+        if my_fonts search "$NAME" ; then
           echo "=== Already installed: $NAME"
           continue
         fi
@@ -170,7 +170,7 @@ install () {
       local +x INSTALLED=0
       local +x DESTDIR="$HOME/.local/share/fonts"
 
-      if font_setup search "$NAME" ; then
+      if my_fonts search "$NAME" ; then
         echo "=== Already installed."
         exit 0
       fi
@@ -216,7 +216,7 @@ install () {
         local +x SEARCH_NAME="${NAME//-/.*}"
         local +x URL="https://www.fontsquirrel.com/fonts/download/$NAME"
 
-        if font_setup search "$NAME" ; then
+        if my_fonts search "$NAME" ; then
           echo "=== Already installed."
           exit 0
         fi

@@ -31,5 +31,5 @@ search () {
       ALT="|Terminess"
       ;;
   esac
-  font_setup list | grep --color=always -i -E "$SEARCH_NAME|$SPACED$ALT"
+  my_fonts list | grep --color=always -i -E "$SEARCH_NAME|$SPACED$ALT"
 } # === end function
