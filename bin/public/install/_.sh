@@ -27,7 +27,8 @@ install () {
         cairo                 \
         freetype              \
         noto-fonts-ttf        \
-        liberation-fonts-ttf
+        liberation-fonts-ttf  \
+        font-awesome5
 
       echo "=== Installing powerline:"
       my_fonts install powerline
