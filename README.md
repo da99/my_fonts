@@ -1,5 +1,14 @@
 
 
+Helv Font
+==========
+This is the Adobe bitmap font, Helvetica. The font name
+has been changed to "Helv" in the source files
+in order to not be used in applications
+when "Helvetica" is requested. This Adobe version of the Helvetica
+font is bitmap and does not look good in web pages and other
+applications.
+
 Infinality-alternatives:
 ===========================
 
