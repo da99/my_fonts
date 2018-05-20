@@ -9,6 +9,11 @@ when "Helvetica" is requested. This Adobe version of the Helvetica
 font is bitmap and does not look good in web pages and other
 applications.
 
+Linux and font configuration:
+=============================
+
+https://seasonofcode.com/posts/how-to-set-default-fonts-and-font-aliases-on-linux.html
+
 Infinality-alternatives:
 ===========================
 
