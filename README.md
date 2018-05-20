@@ -27,6 +27,10 @@ Fonts:
 * boxxy font best used at size 14 medium/normal
 * ctrld-font font best used at size 13 medium/normal
 
+Other fonts:
+=============
+https://www.iamcal.com/misc/fonts/
+
 Reference:
 ====================================
 
