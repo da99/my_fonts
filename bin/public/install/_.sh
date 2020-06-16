@@ -101,7 +101,7 @@ install () {
         cd fonts
         local +x CURRENT="$(my_git describe)"
         echo -n "=== pulling: "
-        git pull
+        git pull --no-rebase
         if [[ "$CURRENT" == "$(my_git describe)" ]]; then
           echo "=== Already installed latest."
         else

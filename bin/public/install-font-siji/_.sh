@@ -6,7 +6,7 @@ install-font-siji () {
   cd "$THIS_DIR"/progs
   if [[ -d "siji" ]]; then
     cd siji
-    git pull
+    git pull --no-rebase
   else
     git clone https://github.com/stark/siji
     cd siji
